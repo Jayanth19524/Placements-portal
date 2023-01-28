@@ -1,0 +1,32 @@
+{% extends 'companies/navbar.html' %}  
+{% block content %}
+ <div class="container-fluid">
+       <div class="row">
+    
+<div class="col-lg-12 card overflow-hidden flex-wrap"  >
+    <div class="card-header">
+        Companies
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">name</th>
+          <th scope="col">role</th>
+          <th scope="col">apply</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in civilcompanies %}
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.name}}</td>
+        <td>{{i.role}}</td>
+        <td><a href="dashboard/" class="btn btn-primary">Apply</a></td>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+{% endblock %}
